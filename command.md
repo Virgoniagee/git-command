@@ -57,3 +57,6 @@
 	分支版本
 	>>>>>>>>branch
 
+	#手动解决冲突后 需要add - commit commit时不能指明文件名 
+	#git不知道当前commit的版本是哪一个
+
