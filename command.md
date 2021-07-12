@@ -25,9 +25,19 @@
 	$ git log
 
 	#修改文件后 需要再次add后commit 每次commit后都会生成一个新的版本号
+	git reset --hard [版本号]
 	
 
 
 ## 在本地管理 ##
-
+### 分支管理 ###
+	#分支管理 方便项目分模块和功能开发 可以同时并行开发项目
+	#创建分支
+	$ git branch [分支名]
+	#查看分支
+	$ git branch -v
+	#切换分支
+	$ git checkout [分支名]
+	#将某分支合并到当前HEAD上
+	$ git merge [需要被合并的分支版本]
 
