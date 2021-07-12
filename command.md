@@ -60,3 +60,53 @@
 	#手动解决冲突后 需要add - commit commit时不能指明文件名 
 	#git不知道当前commit的版本是哪一个
 
+
+# 远程仓库 #
+## 创建远程仓库 创立连接 ##
+	#查看当前所有远程地址别名
+	$ git remote -v
+	#在本地为远程仓库取别名
+	$ git remote add [别名] [http://....]
+## 托管中心拖取 ##
+	#public 远程库的克隆 不需要登录
+	#拉取代码、初始化本地库、创建别名(origin)
+	$ git clone [http://....]
+
+	#拉取版本更改的部分到本地库
+	#自动提交本地库
+	$ git pull [别名/远程地址] [分支]
+## 团队开发 ##
+	#非团队人员不能直接push分支到远程库
+	#负责人github>settings>manage access>invite a collaborator
+	#邀请github账号加入团队
+	#被邀请人在邀请函地址同意
+	
+	#推送分支
+	$ git push [别名/远程地址] [分支]
+
+	#拉取
+	$ git pull [别名/远程地址] [分支]
+
+## 非团队人员开发 ##
+	#拉取
+	$ git clone [http://....]
+	#直接提交 原本的库地址不会改变 仅改变本人的远程库
+	$ git push [别名/远程地址] [分支]
+	#使用pull request
+	#等待团队合并
+	
+# SHH免密登录 #
+必须在本地生成.shh文件夹 其内有shh密钥
+
+	#生成ssh 表示为某用户生成ssh加密协议
+	$ ssh-keygen -t rsa -C [***@**.com]
+	#三次回车 将生成.shh文件夹及其下两个密钥（公/私）
+	$ c:
+	$ cd C:\Users\[电脑用户]\.ssh
+	$ cat id_rsa.pub
+	#将内容复制到github的settings>SSH and GPG keys
+	#并添加
+
+SHH免密登录 可以不用远程操控时验证登录
+
+
