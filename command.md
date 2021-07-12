@@ -38,6 +38,9 @@
 	$ git branch -v
 	#切换分支
 	$ git checkout [分支名]
-	#将某分支合并到当前HEAD上
-	$ git merge [需要被合并的分支版本]
 
+	#本地内的分支指针被保存在\.git\refs\heads下
+	
+### 合并分支 ###
+	#将某分支合并到当前HEAD（当前）分支上
+	$ git merge [需要被合并的分支版本]
